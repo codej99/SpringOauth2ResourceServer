@@ -18,8 +18,10 @@ spring:
 
 security:
   oauth2:
-    client:
-      client-id: testClientId
-      client-secret: testSecret
-    resource:
-      token-info-uri: http://localhost:8081/oauth/check_token
+#    client:
+#      client-id: testClientId
+#      client-secret: testSecret
+#    resource:
+#      token-info-uri: http://localhost:8081/oauth/check_token
+    jwt:
+      key-uri: http://localhost:8081/oauth/token_key
