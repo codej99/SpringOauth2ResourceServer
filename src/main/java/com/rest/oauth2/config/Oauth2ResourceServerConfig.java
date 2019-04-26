@@ -45,7 +45,7 @@ public class Oauth2ResourceServerConfig extends ResourceServerConfigurerAdapter 
     @Bean
     public JwtAccessTokenConverter accessTokenConverter() {
         JwtAccessTokenConverter converter = new JwtAccessTokenConverter();
-        Resource resource = new ClassPathResource("oauth2Public.txt");
+        Resource resource = new ClassPathResource("publicKey.txt");
         String publicKey = null;
         try {
             publicKey = IOUtils.toString(resource.getInputStream());
